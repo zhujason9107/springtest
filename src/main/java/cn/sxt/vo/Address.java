@@ -11,4 +11,9 @@ public class Address {
 		this.address = address;
 	}
 	
+	
+	public void show() {
+		System.out.println(this.getAddress().toString());
+	}
+	
 }

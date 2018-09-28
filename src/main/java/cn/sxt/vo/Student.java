@@ -1,6 +1,6 @@
 package cn.sxt.vo;
 
-import java.util.Arrays;
+
 import java.util.List;
 import java.util.Map;
 import java.util.Properties;
@@ -15,6 +15,7 @@ public class Student {
 	private Set<String> games;
 	private String wife;
 	private Properties info;
+	
 	
 	
 	public void setInfo(Properties info) {
@@ -41,11 +42,21 @@ public class Student {
 	public void setWife(String wife) {
 		this.wife = wife;
 	}
-	@Override
-	public String toString() {
-		return "Student [name=" + name + ", addr=" + addr + ", books=" + Arrays.toString(books) + ", hobbies=" + hobbies
-				+ ", cards=" + cards + ", games=" + games + ", wife=" + wife + ", info=" + info + "]";
+	
+	public void show() {
+		System.out.println("name="+name+"   addr="+addr.getAddress());
+		System.out.println("book=");
+		for(int i=0;i<books.length;i++) {
+			System.out.println(books[i]+"   ");	
+		}
+		System.out.println();
+		System.out.println("hobbies"+hobbies);
+		System.out.println("cards="+cards);
+		System.out.println("games="+games);
+		System.out.println("wife="+wife);
+		System.out.println("info="+info);
 	}
+	
 	
 	
 }

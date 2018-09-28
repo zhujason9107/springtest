@@ -48,7 +48,7 @@
 			
 		<property name="wife"><null /></property>
 		
-		<property name="">
+		<property name="info">
 			<props>
 				<prop key="学号">2018092701</prop>
 				<prop key="sex">男</prop>
@@ -57,6 +57,11 @@
 		</property>
 		
 	</bean>
+	
+	<!-- P命名空间属性依然要设置set方法 -->
+	<bean id="user" class="cn.sxt.vo.User" p:name="张三" p:age="28" />
+	<bean  id="u1" class="cn.sxt.vo.User" c:name="李思思" c:age="38"/>
+	
 	
 
 </beans>
